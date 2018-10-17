@@ -9,15 +9,7 @@ android {
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
     }
-    buildTypes {
-        release {
-            zipAlignEnabled true //zipAlign可以让安装包中的资源按4字节对齐，这样可以减少应用在运行时的内存消耗
-            minifyEnabled true
-            //在模块中混淆需要使用,这里我们使用默认
-            consumerProguardFiles '../proguard-rules-default.pro','proguard-rules.pro'
-//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+
     compileOptions {
         targetCompatibility rootProject.target_Compatibility
         sourceCompatibility rootProject.source_Compatibility
