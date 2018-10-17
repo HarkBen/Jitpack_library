@@ -8,8 +8,6 @@ build
 gradle
 # 整个 .gradle 文件夹
 .gradle
-# 文档
-*.md
 # 整个 androidTest文件夹
 andoridTest
 
