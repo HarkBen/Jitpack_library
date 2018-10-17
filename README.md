@@ -15,7 +15,7 @@ allprojects {
 2.module目录 build.gradle 添加
 
 ```
-implementation 'com.github.HarkBen:library_http:vT1.0'
+implementation 'com.github.HarkBen:library_http:0.9'
 ```
 
 混淆
