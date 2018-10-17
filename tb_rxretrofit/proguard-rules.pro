@@ -16,3 +16,6 @@
 #   public *;
 #}
 
+-dontwarn okhttp3.logging.**
+-keep class okhttp3.internal.**{*;}
+-dontwarn okio.**

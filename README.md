@@ -18,4 +18,11 @@ allprojects {
 implementation 'com.github.HarkBen:library_http:vT1.0'
 ```
 
+混淆
+
+```
+-dontwarn okhttp3.logging.**
+-keep class okhttp3.internal.**{*;}
+-dontwarn okio.**
+```
 
