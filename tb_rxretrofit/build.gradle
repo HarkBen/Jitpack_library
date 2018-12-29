@@ -10,10 +10,7 @@ android {
         versionName rootProject.ext.versionName
     }
 
-    compileOptions {
-        targetCompatibility rootProject.target_Compatibility
-        sourceCompatibility rootProject.source_Compatibility
-    }
+
     packagingOptions {
         exclude 'META-INF/rxjava.properties'
     }
@@ -26,6 +23,4 @@ dependencies {
     api 'com.github.franmontiel:PersistentCookieJar:v1.0.0'
     api 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
     api 'io.reactivex:rxandroid:1.0.1'
-    api 'com.android.support:support-annotations:24.2.1'
-
 }
