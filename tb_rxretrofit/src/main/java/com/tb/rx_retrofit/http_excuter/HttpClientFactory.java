@@ -28,7 +28,8 @@ import okhttp3.OkHttpClient;
  * @最后更新时间：17/11/15 下午3:58
  */
 public class HttpClientFactory {
-    private static OkHttpClient okHttpClient;
+    //使用volatile 屏蔽未创建时的读取，避免创建单利时发生指令重排导致 单利未一次创建成功
+    private static volatile OkHttpClient okHttpClient;
 
     private HttpClientFactory(){
 
@@ -118,7 +119,6 @@ public class HttpClientFactory {
         /**
          * 这里使用的LogInterceptor 内部采用的也是日志类 TBHttpLog
          * 对于 Tblog的 debug 模式的更改这里统一受约束
-         * 保证所有Client统一性，不允许重复调用build()方法
          * @return
          */
         public OkHttpClient  build() {
@@ -158,7 +158,7 @@ public class HttpClientFactory {
                 }
             }
 
-          throw new RepeatBuildException();
+            return okHttpClient;
         }
     }
 

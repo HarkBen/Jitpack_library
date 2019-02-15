@@ -8,6 +8,7 @@ package com.tb.rx_retrofit.tools.exception;
  * author Ben
  * Last_Update - 2016/11/9
  */
+@Deprecated
 public class RepeatBuildException extends RuntimeException {
     public RepeatBuildException(){
         this("Client was builded.In an application you can hold only one okHttpClient instance");
